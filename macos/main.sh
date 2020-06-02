@@ -40,26 +40,26 @@ macos_magics() {
   fi
 
   # compile applescripts
-  path="./macos/applescripts"
-  scripts=$(ls $path)
+  # path="./macos/applescripts"
+  # scripts=$(ls $path)
 
-  for script in ${scripts[@]}; do
-    filename="${script%.*}"
-    echo "[*] Compiling $filename AppleScript..."
+  # for script in ${scripts[@]}; do
+  #   filename="${script%.*}"
+  #   echo "[*] Compiling $filename AppleScript..."
 
-    if [[ $filename = "netflix" ]]; then
-      read -p " - [*] What's your Netflix profile name? " profile
+  #   if [[ $filename = "netflix" ]]; then
+  #     read -p " - [*] What's your Netflix profile name? " profile
 
-      echo $profile > "$HOME/.netflix_profile"
-    fi
+  #     echo $profile > "$HOME/.netflix_profile"
+  #   fi
 
-    if [[ $filename = "toggle-headphones" ]]; then
-      read -p " - [*] What's your headphones name (see Bluetooth menu)? " headphones
+  #   if [[ $filename = "toggle-headphones" ]]; then
+  #     read -p " - [*] What's your headphones name (see Bluetooth menu)? " headphones
 
-      echo $headphones > "$HOME/.headphones_name"
-    fi
+  #     echo $headphones > "$HOME/.headphones_name"
+  #   fi
 
-    osacompile -o "$filename.app" "$path/$filename.applescript"
-  done
+  #   osacompile -o "$filename.app" "$path/$filename.applescript"
+  # done
 }
 

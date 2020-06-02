@@ -2,7 +2,7 @@ brew_pkgs_list=""
 cask_pkgs_list=""
 
 install_brew_pkg() {
-  brew install $1 &> /dev/null &
+  brew install $1 &
   echo "   [*] Installing $1..."
 
   [ $? -eq 0 ] \
@@ -11,7 +11,7 @@ install_brew_pkg() {
 }
 
 install_cask_pkg() {
-  brew install cask $1 &> /dev/null &
+  brew cask install $1 &
   echo "   [*] Installing $1..."
 
   [ $? -eq 0 ] \

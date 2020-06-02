@@ -20,7 +20,6 @@ antigen bundles <<EOBUNDLES
   command-not-found
   extract
   catimg
-  heroku
   node
   git
   osx
@@ -47,7 +46,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=1000
 bindkey -v
-zstyle :compinstall filename '/Users/yoavmmn/.zshrc'
+zstyle :compinstall filename '/Users/tamircher/.zshrc'
 
 setopt autocd extendedglob
 
@@ -60,12 +59,6 @@ setopt COMPLETE_ALIASES
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-# Autocomplete to aws-cli
-if [ -f '/usr/local/bin/aws_zsh_completer.sh' ]
-  then
-    source "/usr/local/bin/aws_zsh_completer.sh"
-fi
 
 # thefuck cli alias
 eval $(thefuck --alias)
